@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+var wr = require('../lib');
+
+var dictionary  = process.argv[2];
+var term        = process.argv[3];
+
+var wordreference = new wr.Wordreference(process.env['WORDREFERENCE_API_KEY']);
+
+wordreference.search(dictionary, term, function(data) {
+  var object = JSON.parse(data);
+  var dumper = new wr.Dumper(object);
+  dumper.dump();
+});
+
+
+
+
+
