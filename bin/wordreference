@@ -5,6 +5,12 @@ var wr = require('../lib');
 var dictionary  = process.argv[2];
 var term        = process.argv[3];
 
+if (dictionary== null || term == null) {
+  console.log("Usage: wordreference DICTIONARY TERM")
+  console.log("Example: wordreference enit hello")
+  process.exit(1)
+}
+
 var wordreference = new wr.Wordreference(process.env['WORDREFERENCE_API_KEY']);
 
 wordreference.search(dictionary, term, function(data) {
