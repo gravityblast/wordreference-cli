@@ -12,6 +12,9 @@
   "devDependencies": {
     "coffee-script": "~1.6.3"
   },
+  "dependencies": {
+    "xtend", "2.0.5"
+  },
   "repository": "https://github.com/pilu/wordreference-cli",
   "author": "Andrea Franz (http://gravityblast.com)",
   "license": "MIT"
