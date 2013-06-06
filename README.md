@@ -21,7 +21,7 @@ In your profile file export your wordreference.com API KEY:
 
     export WORDREFERENCE_API_KEY=YOUR_API_KEY
 
-If you usually use a dictionary, create a function like this in your profile file:
+If you usually use the same dictionary, create a function like this in your profile file:
 
     function wr  { wordreference enit $1 | less;  }
 
