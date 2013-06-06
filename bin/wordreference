@@ -15,7 +15,7 @@ var wordreference = new wr.Wordreference(process.env['WORDREFERENCE_API_KEY']);
 
 wordreference.search(dictionary, term, function(data) {
   var object = JSON.parse(data);
-  var dumper = new wr.Dumper(object);
+  var dumper = new wr.Dumper(term, dictionary, object);
   dumper.dump();
 });
 

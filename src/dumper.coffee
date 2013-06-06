@@ -1,7 +1,8 @@
 class Dumper
-  constructor: (@object) ->
+  constructor: (@term, @dictionary, @object) ->
 
   dump: ->
+    console.log "#{@term.toUpperCase()} (#{@dictionary})\n"
     @dumpObject @object
     console.log '© WordReference.com'
 
@@ -28,7 +29,7 @@ class Dumper
   dumpTranslationTerm: (term, indent) ->
     if term instanceof Object
       indent = indent or 0
-      spaces = (' ' for i in [0...indent]).join ''
+      spaces = ("\t" for i in [0...indent]).join ''
       @print spaces, term.term, term.POS, term.sense
 
   print: (spaces, term, pos, sense) ->
