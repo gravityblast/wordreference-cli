@@ -9,6 +9,12 @@ Clone this repository and install the package:
 
     cd wordreference-cli
 
+Compile the coffeescript sources:
+
+    coffee -o lib -c src/
+
+Install the package:
+
     npm install -g .
 
 In your profile file export your wordreference.com API KEY:
